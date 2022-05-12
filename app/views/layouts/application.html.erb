@@ -16,9 +16,7 @@
       <%#= message %>
     <%# end %>
     
-    <% if notice %>
-      <%= notice %>
-    <% end %>
+    <%= render 'layouts/alerts' %>
     
     <%= yield %>
   </body>
