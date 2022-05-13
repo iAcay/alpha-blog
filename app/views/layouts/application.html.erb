@@ -11,14 +11,14 @@
   </head>
 
   <body class="d-flex flex-column">
-  <%= render 'layouts/navigation' %>
-  
-    <%# flash.each do |name, message| %>
-      <%#= message %>
-    <%# end %>
-    
-    <%= render 'layouts/alerts' %>
-    
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+    <div id="page-content">
+      <%# flash.each do |name, message| %>
+        <%#= message %>
+      <%# end %>
+      <%= render 'layouts/alerts' %>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
   </body>
 </html>

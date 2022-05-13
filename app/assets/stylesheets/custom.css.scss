@@ -11,11 +11,16 @@
 #logo {
   float: left;
   font-size: 1.6em;
-  color: yellow;
+  color: rgb(196, 196, 48);
   letter-spacing: -2px;
   font-weight: bold;
 }
 
+#home_logo {
+  color: rgb(196, 196, 48);
+  letter-spacing: -2px;
+  font-weight: bold;
+}
 #home-container {
   margin-top: 25px
 }
@@ -43,3 +48,16 @@ body {
   background: linear-gradient(to right, #eff2f5, #a4a7a9);
 }
 
+#cards_body {
+  background: linear-gradient(to right, #262424, #2a2b24);
+}
+
+#forms {
+  background: black;
+  color: white;
+}
+
+#text_field {
+  background: #7f7f80;
+  background: linear-gradient(to right, #eff2f5, #a4a7a9);
+}
