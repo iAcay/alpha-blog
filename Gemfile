@@ -24,6 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp', require: false
+gem 'will_paginate', '~> 3.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

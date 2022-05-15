@@ -45,7 +45,7 @@ body {
 
 body {
   background: #7f7f80;
-  background: linear-gradient(to right, #eff2f5, #a4a7a9);
+  background: linear-gradient(to right, #929394, #333334);
 }
 
 #cards_body {
@@ -65,3 +65,37 @@ body {
 #test {
   border-radius: 20;
 }
+
+/* pagination styling */
+
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em;
+    border-radius: 5px; 
+  }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(255, 255, 9); }
+  .flickr_pagination a {
+    border: 1px solid #888585;
+    color: rgb(196, 196, 48);
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: rgb(196, 196, 48);
+      background: rgb(196, 196, 48);
+      color: white; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
