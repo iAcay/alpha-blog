@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
   end
 
   def correct_user
-    redirect_to @article, notice: 'You are not authorized to edit this article.' unless current_user == @article.user
+    redirect_to @article, alert: 'You are not authorized.' unless (current_user == @article.user) || current_user.admin?
   end
 end

@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    session[:user_id] = nil
+    session[:user_id] = nil if @user == current_user
     redirect_to root_path, notice: "Account was successfully deleted."
   end
 
@@ -53,6 +53,6 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    redirect_to @user, notice: "You are not authorized to access this page." unless @user == current_user
+    redirect_to @user, alert: "You are not authorized." unless (@user == current_user) || current_user.admin?
   end
 end
