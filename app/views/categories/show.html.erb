@@ -1,0 +1,24 @@
+<div class="container card-header bg-dark mt-3 text-light">
+  <h1 class="text-center mt-3">Category: <%= @category.name %></h1>
+  <div class="text-end">
+    <% if logged_in? && current_user.admin? %>
+      <%= link_to 'Edit category name', edit_category_path(@category), class: 'btn btn-outline-light btn-sm'%>
+    <% end %>
+  </div>
+</div>
+<div class="card-body text-end text-light">
+  <div class="container card-header bg-dark mb-3 mt-4 col-10">
+    <p class="card-text"><h3 class="text-center">Articles:</h3></p>
+  </div>
+
+  <div class="flickr_pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+
+  <%= render 'articles/article' %>
+
+  <div class="flickr_pagination mb-3">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+</div>
+

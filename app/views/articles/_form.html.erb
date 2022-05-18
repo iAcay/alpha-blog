@@ -3,26 +3,31 @@
     <div class="col-10">
       <%= render 'shared/errors', obj: @article %>
       <%= form_with(model: @article, class: "shadow-lg p-3 mb-3 rounded", id: "forms", local: true) do |f| %>
-      </p>
+    
         <div class="form-group row">
-          <%= f.label :title, class: "col-2 col-form-label" %>
+          <%= f.label :title, class: "col-2 col-form-label mt-3" %>
           <div class="col-10">
-            <%= f.text_field :title, class: "form-control", placeholder: "Title of article", id: "text_field" %>
+            <%= f.text_field :title, class: "form-control mt-3", placeholder: "Title of article", id: "text_field" %>
           </div>
         </div>
 
-        </p>
-
         <div class="form-group row">
-          <%= f.label :description, class: "col-2 col-form-label" %>
+          <%= f.label :description, class: "col-2 col-form-label mt-3" %>
           <div class="col-10">
-            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description of article", id: "text_field" %>
+            <%= f.text_area :description, rows: 10, class: "form-control mt-3", placeholder: "Description of article", id: "text_field" %>
           </div>
         </div>
-        </p>
+
+        <div class="form-group row mt-3">
+          <%= f.label :category, class: "col-2 form-check-label" %>
+          <div class="col-10 form-check">
+            <%= f.collection_check_boxes :category_ids, Category.order(:name), :id, :name %>
+          </div>
+        </div>
+
         <p class="text-center">
-          <%= link_to 'Cancel', articles_path, class: 'btn btn-outline-light btn-lg' %>
-          <%= f.submit class: "btn btn-light btn-lg" %>
+          <%= link_to 'Cancel', articles_path, class: 'btn btn-outline-light btn-lg mt-3' %>
+          <%= f.submit class: "btn btn-light btn-lg mt-3" %>
         </p>
       <% end %>
     </div>
