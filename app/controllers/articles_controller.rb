@@ -22,7 +22,6 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      #flash[:notice] = "Article was created successfully."
       redirect_to @article, notice: 'Article was successfully created.'
     else
       render :new
