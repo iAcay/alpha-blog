@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @articles = Article.paginate(page: params[:page], per_page: 5).order(created_at: :desc)
   end
 
   def show
